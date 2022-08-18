@@ -14,6 +14,11 @@ public class Auto {
 	public int godina;
 	public int mesecReg;
 	public int kubikaza;
+	public String registracija;
+	public boolean klima;
+	public int maxBrzina;
+	public double kapacitetRezervoara;
+	public double trenutnoGorivo;
 
 	public void print() {
 //	[Vozac]
@@ -66,4 +71,61 @@ public class Auto {
 		}
 		return 2000 * 100 * 0.3;
 	}
+
+	public void dodajGas() {
+		if (this.brzina < this.maxBrzina) {
+			this.brzina += 10;
+		} else {
+			this.brzina = maxBrzina;
+		}
+	}
+
+	public void koci() {
+		if (this.brzina > 0) {
+			this.brzina -= 10;
+		} else {
+			this.brzina = 0;
+		}
+	}
+
+	public double trenutnaPotrosnja() {
+		double faktorKlime = 0;
+		if (klima == true) {
+			faktorKlime = 1.2;
+		} else {
+			faktorKlime = 1;
+		}
+		return (this.brzina / 100.0 * potrosnja) * faktorKlime;
+	}
+
+	public void stampajTablu() {
+		double brojCrtica = (this.brzina * 100) / this.maxBrzina;
+		for (int i = 0; i < 100; i++) {
+			if (i < brojCrtica) {
+				System.out.print("|");
+			} else {
+				System.out.print(".");
+			}
+		}
+		System.out.print(this.brzina + "/" + this.maxBrzina + "km/h");
+	}
+
+	public double natociGorivo(double gorivoTocenje) {
+		int litar = 170;
+		double naplata = litar * gorivoTocenje;
+		double trenutno = this.trenutnoGorivo + gorivoTocenje;
+		if (trenutno > this.kapacitetRezervoara) {
+			naplata =(this.kapacitetRezervoara-this.trenutnoGorivo) * litar ;
+			this.trenutnoGorivo = this.kapacitetRezervoara;
+		}
+		return naplata;
+
+	}
+//	public double natoci(int litri) {
+//		if (litri + this.tretnutnoURezervoaru > this.kapacitetRezervoara) {
+//			return (this.kapacitetRezervoara - this.tretnutnoURezervoaru) * 100;
+//		} else {
+//			return litri * 100;
+//		}
+//	}
 }

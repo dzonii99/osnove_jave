@@ -37,10 +37,19 @@ public class Zadatak3 {
 //			metodu koja racuna i vraca cenu registracije za auto. 
 //			Za automobile do 2000 kubika cena registracije kubikaza * 100din,
 //			za automobile preko 2000 kubika dodatno se uracunava 30% na cenu.
+//		Dopuniti klasu Auto tako da ima:
+//			atribut broj registracije
+//			da li je ukljucena klima u autu
+//			metodu dodajGas, koja povecava trenutnu brzinu za 10.
+//			metodu koci, koja smanjuje brzinu za 10. Brzina ne moze da ode ispod nule.
+//			metodu koja racuna i vraca trenutnu potrosnju auta. Metoda racuna po formuli:
+//			faktor klime - ako je ukljucena klima faktor je 1.2, ako nije ukljucena onda 
+//			je 1.0
+//			(trenutna brzina / 100.0 * potrosnja na 100km) * faktor klime
 
 		Auto a = new Auto();
 
-		a.brzina = 80;
+		a.brzina = 90;
 		a.fullName = "Pera Petrovic";
 		a.marka = "AUDI";
 		a.potrosnja = 11;
@@ -48,6 +57,11 @@ public class Zadatak3 {
 		a.godina = 1985;
 		a.mesecReg = 6;
 		a.kubikaza = 2000;
+		a.registracija = "NI-215ZY";
+		a.klima = false;
+		a.maxBrzina = 240;
+		a.kapacitetRezervoara = 50;
+		a.trenutnoGorivo = 20;
 		a.print();
 		boolean reg = a.reg(8);
 		int kazna = a.kazna(60);
@@ -71,9 +85,20 @@ public class Zadatak3 {
 		} else {
 			System.out.println("Vas auto nije registrovan");
 		}
-
 		System.out.println("Vasa registracija kosta: " + cena + "RSD");
-
+		a.dodajGas();
+		System.out.println("Uvecali ste brzinu : " + a.brzina);
+		a.koci();
+		System.out.println("Smanjili ste brzinu: " + a.brzina);
+		double trenutnaPotrosnja = a.trenutnaPotrosnja();
+		System.out.println("Vasa trenutna potrosnja je: " + trenutnaPotrosnja);
+		a.dodajGas();
+		System.out.println("Uvecali ste brzinu : " + a.brzina);
+		a.stampajTablu();
+		double natoci = a.natociGorivo(400);
+		System.out.println();
+		System.out.println("Natocili ste 20 i cena je: " + natoci + "din i sada imate" + " " 
+		+ a.trenutnoGorivo + "l");
 	}
 
 }
