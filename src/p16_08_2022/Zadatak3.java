@@ -91,7 +91,7 @@ public class Zadatak3 {
 		a.koci();
 		System.out.println("Smanjili ste brzinu: " + a.brzina);
 		double trenutnaPotrosnja = a.trenutnaPotrosnja();
-		System.out.println("Vasa trenutna potrosnja je: " + trenutnaPotrosnja);
+		System.out.println("Vasa trenutna potr osnja je: " + trenutnaPotrosnja);
 		a.dodajGas();
 		System.out.println("Uvecali ste brzinu : " + a.brzina);
 		a.stampajTablu();
