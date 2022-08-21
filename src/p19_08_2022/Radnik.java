@@ -65,12 +65,13 @@ public class Radnik {
 	}
 
 	public double minuliRad() {
+		double m = 0;
 		if (this.godineStaza <= 10) {
-			return 0.05;
+			return m = 0.05;
 		} else if (this.godineStaza <= 20) {
-			return 0.0075;
+			return m = 0.0075;
 		} else if (this.godineStaza > 20) {
-			return 0.1;
+			return m = 0.1;
 		}
 		return 0;
 	}
@@ -94,6 +95,35 @@ public class Radnik {
 			return 4.12;
 		}
 		return 0;
+//		double k = 1.0;
+//		switch (this.stepenStruke) {
+//		case 1:
+//			k = 1.03;
+//			break;
+//		case 2:
+//			k = 1.65;
+//			break;
+//		case 3:
+//			k = 2.00;
+//			break;
+//		case 4:
+//			k = 2.27;
+//			break;
+//		case 5:
+//			k = 2.88;
+//			break;
+//		case 6:
+//			k = 3.09;
+//			break;
+//		case 7:
+//			k = 3.40;
+//			break;
+//		case 8:
+//			k = 4.12;
+//			break;
+//		}
+//
+//		return k;
 	}
 
 	public double plata() {
