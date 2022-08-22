@@ -58,14 +58,6 @@ public class FacebookPost {
 		return this.shares;
 	}
 
-	public void setLikes(int like) {
-		this.likes = like;
-	}
-
-	public void setShares(int share) {
-		this.shares = share;
-	}
-
 	public void setFullNameWho(String fullNameWho) {
 		this.fullNameWho = fullNameWho;
 	}

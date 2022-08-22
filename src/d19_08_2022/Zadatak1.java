@@ -36,45 +36,40 @@ public class Zadatak1 {
 				+ "_______¶¶1¶__¶¶¶__¶¶____________________¶¶¶¶\r\n" + "_________¶¶¶____¶¶_____________________¶¶¶\r\n"
 				+ "___________¶¶¶_______________________¶¶¶\r\n" + "____________¶¶¶¶_________________¶¶¶¶\r\n"
 				+ "________________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶\r\n" + "");
-		firstCase.setLikes(1130042);
-		firstCase.setShares(758764);
+		for (int i = 0; i < 1150585; i++) {
+			firstCase.like();
+		}
 		for (int i = 0; i < 500; i++) {
 			firstCase.dislike();
 		}
-		for (int i = 0; i < 1543; i++) {
-			firstCase.like();
-		}
-		for (int i = 0; i < 2341; i++) {
+
+		for (int i = 0; i < 761105; i++) {
 			firstCase.share();
 		}
 
 		FacebookPost secondCase = new FacebookPost("Nenad Jovanovic", "Provodadzija", "Pitacu te jos 2 puta?\r\n"
 				+ "-Da li zelis da se udas za mene?\r\n" + "-Da li zelis da se udas za mene?");
-		secondCase.setLikes(7745);
-		secondCase.setShares(2214);
 
-		for (int i = 0; i < 10245; i++) {
+		for (int i = 0; i < 17990; i++) {
 			secondCase.like();
 		}
 		for (int i = 0; i < 500; i++) {
 			secondCase.dislike();
 		}
-		for (int i = 0; i < 12458; i++) {
+		for (int i = 0; i < 18672; i++) {
 			secondCase.share();
 		}
 
 		FacebookPost thirdCase = new FacebookPost("Provodadzija", "Nenad Jovanovic",
 				"╔═════════════════╗\r\n" + "║ Nobody cares    ║\r\n" + "╚═════════════════╝");
-		thirdCase.setLikes(324);
-		thirdCase.setShares(68);
 
-		for (int i = 0; i < 2114; i++) {
+		for (int i = 0; i < 2438; i++) {
 			thirdCase.like();
 		}
 		for (int i = 0; i < 8479; i++) {
 			thirdCase.dislike();
 		}
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 78; i++) {
 			thirdCase.share();
 		}
 
