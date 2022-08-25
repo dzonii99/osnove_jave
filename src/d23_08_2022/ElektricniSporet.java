@@ -48,7 +48,7 @@ public class ElektricniSporet {
 	public Ringla getDoleDesno() {
 		return doleDesno;
 	}
-
+// ne radi nesto ovo update treba ali uskoro ce kad skapiram kako i sta
 	public void pojacaj(int pozicija) {
 		int brojUpaljenihRingli = 0;
 		if (pozicija == 1) {
@@ -67,6 +67,7 @@ public class ElektricniSporet {
 			this.doleDesno.pojacajRinglu();
 			brojUpaljenihRingli++;
 		}
+
 		if (brojUpaljenihRingli > this.maxBrojUkljucenihRingli) {
 			if (pozicija != 1) {
 				this.iskljuciRinglu(1);

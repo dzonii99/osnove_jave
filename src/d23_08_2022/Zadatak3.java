@@ -1,5 +1,6 @@
 package d23_08_2022;
 
+
 public class Zadatak3 {
 
 	public static void main(String[] args) {
@@ -81,6 +82,7 @@ public class Zadatak3 {
 //		Tip ringle: tip ringle
 //		Jacina: jacina
 //		Grejac: jacina grejaca kW
+
 		Ringla goreL = new Ringla("ekspres", 2.3);
 		Ringla goreD = new Ringla("obicna", 1);
 		Ringla doleL = new Ringla("obicna", 0.8);
