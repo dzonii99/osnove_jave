@@ -33,13 +33,13 @@ public class Zadatak2 {
 		Vaga vaga = new Vaga();
 		vaga.setProizvod(banane);
 		vaga.setMernaJedinica("kg");
-		vaga.print(3);
+		vaga.print(2);
 
-		Proizvod pivo = new Proizvod("3517", "Bure piva", 183.47);
+		Proizvod pivo = new Proizvod("3517", "Bure piva", 183);
 		Vaga vaga2 = new Vaga();
 		vaga2.setProizvod(pivo);
 		vaga2.setMernaJedinica("lb");
-		vaga2.print(30);
+		vaga2.print(60);
 
 	}
 

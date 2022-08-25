@@ -35,13 +35,12 @@ public class Vaga {
 	public void print(double tezina) {
 		proizvod.print();
 		if (this.mernaJedinica.equals("kg")) {
-			System.out.println(this.proizvod.getCenaKg() + this.mernaJedinica + " x " + tezina);
-			System.out.println("Ukupno: " + this.sracunajCenu(tezina) + "kg");
+			System.out.println(this.proizvod.getCenaKg() + " din/" + this.mernaJedinica + " x " + tezina);
 		}
 		if (this.mernaJedinica.equals("lb")) {
-			System.out.println(proizvod.getCenaLb() + this.mernaJedinica + " x " + tezina);
-			System.out.println("Ukupno: " + this.sracunajCenu(tezina) + "lb");
+			System.out.println(proizvod.getCenaLb() + " din/" + this.mernaJedinica + " x " + tezina);
 		}
+		System.out.println("Ukupno: " + this.sracunajCenu(tezina) + "din");
 
 	}
 

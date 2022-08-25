@@ -39,7 +39,6 @@ public class Knjiga {
 	}
 
 	public Knjiga(String isbn, String naziv, int godina, Autor autor) {
-		super();
 		this.isbn = isbn;
 		this.naziv = naziv;
 		this.godina = godina;

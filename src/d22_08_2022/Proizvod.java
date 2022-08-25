@@ -36,7 +36,7 @@ public class Proizvod {
 	}
 
 	public double getCenaLb() {
-		return 2.2046;
+		return this.cenaPoKg / 2.2046;
 	}
 
 	public void print() {
