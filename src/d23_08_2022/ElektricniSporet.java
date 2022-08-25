@@ -48,23 +48,32 @@ public class ElektricniSporet {
 	public Ringla getDoleDesno() {
 		return doleDesno;
 	}
+
 // ne radi nesto ovo update treba ali uskoro ce kad skapiram kako i sta
 	public void pojacaj(int pozicija) {
 		int brojUpaljenihRingli = 0;
 		if (pozicija == 1) {
 			this.goreLevo.pojacajRinglu();
-			brojUpaljenihRingli++;
 		}
 		if (pozicija == 2) {
 			this.goreDesno.pojacajRinglu();
-			brojUpaljenihRingli++;
 		}
 		if (pozicija == 3) {
 			this.doleLevo.pojacajRinglu();
-			brojUpaljenihRingli++;
 		}
 		if (pozicija == 4) {
 			this.doleDesno.pojacajRinglu();
+		}
+		if (this.goreLevo.radRingle() == true) {
+			brojUpaljenihRingli++;
+		}
+		if (this.goreDesno.radRingle() == true) {
+			brojUpaljenihRingli++;
+		}
+		if (this.doleDesno.radRingle() == true) {
+			brojUpaljenihRingli++;
+		}
+		if (this.doleLevo.radRingle() == true) {
 			brojUpaljenihRingli++;
 		}
 
