@@ -48,11 +48,11 @@ public class Ringla {
 	}
 
 	public void print() {
-		System.out.println("Ringla je ");
+		System.out.print("Ringla je ");
 		if (this.radRingle() == true) {
-			System.out.print("ukljucena!");
+			System.out.println("ukljucena!");
 		} else {
-			System.out.print("iskljucena.");
+			System.out.println("iskljucena.");
 		}
 		System.out.println("Tip ringle: " + this.tip);
 		System.out.println("Jacina: " + this.jacina);
