@@ -33,8 +33,7 @@ public class Zadatak4 {
 //			korisnika koji je reagovao
 //			U mainu kreirati nekoliko poruka izmedju dva korisnika i postavite nekoliko
 //			reakcija na poruke.
-		
-		
+
 //		ViberKorisnik posiljalac = new ViberKorisnik("Zoran Stojkovic", "0657784574");
 //		posiljalac.setAktivnost(true);
 //		ViberKorisnik primalac = new ViberKorisnik("Jelena Karleusa", "0694578432");
@@ -49,23 +48,23 @@ public class Zadatak4 {
 //		ViberReakcija smajli2 = new ViberReakcija("<3", primalac2);
 //		ViberPoruka poruka2 = new ViberPoruka("Hvala Zoki", "23.08.2022. 20:32", posiljalac2, primalac2, smajli2);
 //		poruka2.print();
-		
+
 		ArrayList<ViberPoruka> poruke = new ArrayList<ViberPoruka>();
 		Scanner s = new Scanner(System.in);
-		
+
 		ViberKorisnik p1 = new ViberKorisnik("Milan Jovanovic", "0657784596");
 		p1.setAktivnost(true);
 		ViberKorisnik p2 = new ViberKorisnik("Nikola Milovanovic", "0691125386");
 		p2.setAktivnost(true);
-		
-		for(int i=0; i<3; i++) {
+
+		for (int i = 0; i < 3; i++) {
 			System.out.print("Unesite poruku: ");
 			String poruka = s.next();
 			s.nextLine();
 			ViberPoruka messages = new ViberPoruka(poruka);
 			poruke.add(messages);
 		}
-		for(int i=0;i<poruke.size();i++) {
+		for (int i = 0; i < poruke.size(); i++) {
 			System.out.println(poruke.get(i).getText());
 		}
 
