@@ -52,9 +52,7 @@ public class History {
 	}
 
 	public void obrisiSveKolaciceZaZadnjihSatVremena(int trenutniSat, int trenutniMinut) {
-//		for(int i=0;i<stranice.size();i++) {
-//			this.stranice.remove(i).removeCookies();
-//		}
+		for (int i = 0; i < this.stranice.size(); i++) {
+		}
 	}
-
 }
