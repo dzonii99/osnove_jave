@@ -40,7 +40,46 @@ public class Zadatak2 {
 //		brojevi: 1, 3, 5, 14, 15, 21, 23
 //
 //		…… i tako za sve kombinacije
+		Listic listic = new Listic();
+		Kombinacija k1 = new Kombinacija("32B45-457", 4, 13, 10, 22, 35, 11, 7);
+		Kombinacija k2 = new Kombinacija("32F78-457", 1, 4, 5, 21, 37, 10, 8);
+		Kombinacija k3 = new Kombinacija("32E89-457", 3, 12, 27, 25, 5, 10, 2);
+		Kombinacija k4 = new Kombinacija("32R13-457", 6, 13, 10, 22, 35, 11, 3);
+		Kombinacija k5 = new Kombinacija("32N11-457", 15, 16, 7, 27, 26, 38, 39);
+		Kombinacija k6 = new Kombinacija("32B01-457", 21, 13, 10, 22, 35, 11, 1);
+		Kombinacija k7 = new Kombinacija("32T32-457", 24, 11, 10, 21, 30, 23, 7);
 
+		Kombinacija dobitnaKombinacija = new Kombinacija("32Y875-457", 6, 13, 10, 22, 35, 11, 3);
+		Kombinacija dobitnaKombinacija2 = new Kombinacija("32Z01-457", 1, 4, 5, 21, 37, 10, 9);
+
+		listic.dodajKombinaciju(k1);
+		listic.dodajKombinaciju(k2);
+		listic.dodajKombinaciju(k3);
+		listic.dodajKombinaciju(k4);
+		listic.dodajKombinaciju(k5);
+		listic.dodajKombinaciju(k6);
+		listic.dodajKombinaciju(k7);
+		if (listic.dobitna(dobitnaKombinacija) == true) {
+			System.out.println("Vasa kombinacija ");
+			dobitnaKombinacija.print();
+			System.out.print("je dobitna");
+		} else {
+			System.out.println("Vasa kombinacija ");
+			dobitnaKombinacija.print();
+			System.out.println("nije dobitna");
+		}
+		System.out.println();
+		if (listic.dobitna(dobitnaKombinacija2) == true) {
+			System.out.println("Vasa kombinacija ");
+			dobitnaKombinacija2.print();
+			System.out.println("je dobitna");
+		} else {
+			System.out.println("Vasa kombinacija ");
+			dobitnaKombinacija2.print();
+			System.out.println("nije dobitna");
+		}
+		System.out.println();
+		listic.print();
 
 	}
 

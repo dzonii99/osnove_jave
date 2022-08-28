@@ -47,7 +47,7 @@ public class Student {
 	}
 
 	public double prosekOcena() {
-		int suma = 0;
+		double suma = 0;
 		int brojacPolozenih = 0;
 		for (int i = 0; i < this.ispiti.size(); i++) {
 			if (this.ispiti.get(i).ispitPolozen() == true) {

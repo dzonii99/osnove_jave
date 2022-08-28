@@ -17,11 +17,53 @@ public class Kombinacija {
 		this.nizBrojeva.add(sedam);
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public int getJedan() {
+		return this.nizBrojeva.get(0);
+	}
+
+	public int getDva() {
+		return this.nizBrojeva.get(1);
+	}
+
+	public int getTri() {
+		return this.nizBrojeva.get(2);
+	}
+
+	public int getCetri() {
+		return this.nizBrojeva.get(3);
+	}
+
+	public int getPet() {
+		return this.nizBrojeva.get(4);
+	}
+
+	public int getSest() {
+		return this.nizBrojeva.get(5);
+	}
+
+	public int getSedam() {
+		return this.nizBrojeva.get(6);
+	}
+
+	public boolean daLiJeIstaKombinacija(Kombinacija k) {
+		for (int i = 0; i < nizBrojeva.size(); i++) {
+			if (this.nizBrojeva.get(i) != k.nizBrojeva.get(i)) {
+				return false;
+			}
+		}
+		return true;
+
+	}
+
 	public void print() {
 		System.out.println("ID: " + this.id);
 		System.out.println("Brojevi: ");
 		for (int i = 0; i < nizBrojeva.size(); i++) {
-			System.out.print(nizBrojeva.get(i));
+			System.out.print(nizBrojeva.get(i) + ", ");
 		}
 	}
 
