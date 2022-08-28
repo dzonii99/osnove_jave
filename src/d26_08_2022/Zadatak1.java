@@ -57,8 +57,7 @@ public class Zadatak1 {
 		System.out.print("Unesite koliko igraca zelite da unesete: ");
 		int n = s.nextInt();
 		for (int i = 0; i < n; i++) {
-			System.out.print("Unesite ime i prezime igraca: ");
-			String fullName = s.nextLine();
+
 			System.out.print("Unesite godinu rodjenja igraca: ");
 			int godinaRodj = s.nextInt();
 			s.nextLine();
@@ -68,9 +67,12 @@ public class Zadatak1 {
 			int broj = s.nextInt();
 			s.nextLine();
 			System.out.print("Unesite poziciju igraca: ");
-			String pozicija = s.next();
+			String pozicija = s.nextLine();
 			System.out.print("Da li je igrac kapiten? ");
 			boolean kapiten = s.nextBoolean();
+			s.nextLine();
+			System.out.print("Unesite ime i prezime igraca: ");
+			String fullName = s.nextLine();
 			Igrac igrac = new Igrac(fullName, jmbg, godinaRodj, broj, pozicija);
 			igrac.setKapiten(kapiten);
 			igraci.add(igrac);
@@ -79,8 +81,7 @@ public class Zadatak1 {
 		System.out.print("Unesite koliko trenera zelite da unesete: ");
 		int n1 = s.nextInt();
 		for (int i = 0; i < n1; i++) {
-			System.out.print("Unesite ime i prezime trenera: ");
-			String fullName = s.nextLine();
+
 			System.out.print("Unesite jmbg trenera: ");
 			String jmbg = s.next();
 			System.out.print("Unesite godinu rodjenja trenera: ");
@@ -90,7 +91,9 @@ public class Zadatak1 {
 			int godIskustva = s.nextInt();
 			s.nextLine();
 			System.out.print("Unesite tip trenera: ");
-			String tip = s.next();
+			String tip = s.nextLine();
+			System.out.print("Unesite ime i prezime trenera: ");
+			String fullName = s.nextLine();
 			Trener trener = new Trener(fullName, jmbg, godinaRodj, godIskustva, tip);
 			treneri.add(trener);
 
