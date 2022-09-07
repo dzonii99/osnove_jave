@@ -1,5 +1,7 @@
 package d05_09_2022;
 
+import java.net.SocketTimeoutException;
+
 public class Zadatak1 {
 
 	public static void main(String[] args) {
@@ -31,22 +33,19 @@ public class Zadatak1 {
 		Sektor s1 = new Sektor("Project manager", 1000);
 		Sektor s2 = new Sektor("Web design", 1500);
 		Sektor s3 = new Sektor("Digital marketing", 1300);
-		Sektor s4 = new Sektor("Java programming", 1700);
-		Sektor s5 = new Sektor("HR", 900);
+		Sektor s4 = new Sektor("Nabavka komponenti", 500);
+		Sektor s5 = new Sektor("Prodaja", 900);
 		menadzer.zaposli(s1);
 		menadzer.zaposli(s2);
 		menadzer.zaposli(s3);
-		menadzer.zaposli(s4);
-		menadzer.zaposli(s5);
 
-		magacioner.zaposli(s1);
-		magacioner.zaposli(s2);
-		magacioner.zaposli(s3);
 		magacioner.zaposli(s4);
 		magacioner.zaposli(s5);
 
-		System.out.println("$" + menadzer.plata());
-		System.out.println("$" + magacioner.plata());
+		System.out.println("Menadzer " + menadzer.fullName);
+		System.out.println("Sa platom $" + menadzer.plata());
+		System.out.println("Magacioner " + magacioner.fullName);
+		System.out.println("Sa platom $" + magacioner.plata());
 
 	}
 
