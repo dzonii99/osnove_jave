@@ -17,7 +17,7 @@ public class PhoneValidator extends Validator {
 	}
 
 	private boolean isDigit() {
-		String regex = "^\\+\\d";
+		String regex = "^(\\+\\d+)?$";
 		if (this.brojTelefona.matches(regex)) {
 			return true;
 		} else {
