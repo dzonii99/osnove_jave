@@ -36,10 +36,10 @@ public class Zadatak3 {
 
 		HistoryPage hp1 = new HistoryPage("Facebook", "https://www.facebook.com", 14, 32);
 		HistoryPage hp2 = new HistoryPage("Google", "https://www.google.com", 16, 12);
-		HistoryPage hp3 = new HistoryPage("Facebook", "https://www.facebook.com", 4, 54);
-		HistoryPage hp4 = new HistoryPage("Facebook", "https://www.facebook.com", 12, 02);
-		HistoryPage hp5 = new HistoryPage("Facebook", "https://www.facebook.com", 9, 41);
-		HistoryPage hp6 = new HistoryPage("Facebook", "https://www.facebook.com", 21, 23);
+		HistoryPage hp3 = new HistoryPage("Youtube", "https://www.youtube.com", 14, 54);
+		HistoryPage hp4 = new HistoryPage("Gmail", "https://www.gmail.com", 15, 02);
+		HistoryPage hp5 = new HistoryPage("Twitter", "https://www.twitter.com", 15, 41);
+		HistoryPage hp6 = new HistoryPage("Instagram", "https://www.instagram.com", 11, 23);
 		History h = new History();
 		h.openPage(hp1);
 		h.openPage(hp2);
@@ -47,6 +47,20 @@ public class Zadatak3 {
 		h.openPage(hp4);
 		h.openPage(hp5);
 		h.openPage(hp6);
+		
+		h.sacuvajKredenciju("Facebook", "peraperic", "peraperic123.");
+		h.sacuvajKredenciju("Google", "zoki123", "zoki123.");
+		h.sacuvajKredenciju("Youtube", "lanmi456", "lanmi123.");
+		h.sacuvajKredenciju("Gmail", "milosav784", "milosav123.");
+		h.sacuvajKredenciju("Twitter", "jagodinka998", "jagodinka123.");
+		h.sacuvajKredenciju("Instagram", "jasmin032", "jasmina123.");
+
+		h.watchHistory();
+		System.out.println();
+//		S tim da hocemo sat vreme unosim samo vreme od poslednjeg sajta jer trenutno vreme mora da bude najvece vreme kao na pravom serveru
+		h.obrisiSveKolaciceZaZadnjihSatVremena(16, 30);
+		h.deleteCookies("https://www.instagram.com");
+
 		h.watchHistory();
 
 	}

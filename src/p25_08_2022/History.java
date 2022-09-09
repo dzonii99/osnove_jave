@@ -17,9 +17,9 @@ public class History {
 		}
 	}
 
-	public void deleteCookies(HistoryPage link) {
+	public void deleteCookies(String link) {
 		for (int i = 0; i < stranice.size(); i++) {
-			if (this.stranice.get(i).getLink().equals(link.getLink())) {
+			if (this.stranice.get(i).getLink().equals(link)) {
 				this.stranice.get(i).removeCookies();
 			}
 		}
@@ -32,10 +32,11 @@ public class History {
 
 	}
 
-	public void sacuvajKredenciju(String naziv, HistoryPage stranice) {
+	public void sacuvajKredenciju(String naziv, String username, String password) {
 		for (int i = 0; i < this.stranice.size(); i++) {
-			this.stranice.get(i).save(stranice.getUsername(), stranice.getPassword());
-			this.stranice.get(i).setNaziv(naziv);
+			if (this.stranice.get(i).getNaziv().equals(naziv)) {
+				this.stranice.get(i).save(username, password);
+			}
 		}
 	}
 
@@ -52,7 +53,12 @@ public class History {
 	}
 
 	public void obrisiSveKolaciceZaZadnjihSatVremena(int trenutniSat, int trenutniMinut) {
+		int trenutnoVremeUMin = trenutniSat * 60 + trenutniMinut;
 		for (int i = 0; i < this.stranice.size(); i++) {
+			int vremeCelo = this.stranice.get(i).getVremeSati() * 60 + this.stranice.get(i).getVremeMinuti();
+			if (vremeCelo > trenutnoVremeUMin - 60) {
+				this.stranice.get(i).removeCookies();
+			}
 		}
 	}
 }

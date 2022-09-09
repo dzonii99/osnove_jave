@@ -66,10 +66,11 @@ public class HistoryPage {
 	}
 
 	public void print() {
-		System.out.println(this.vremeSati + " - " + this.vremeMinuti + " - " + this.naziv + " ... " + this.link);
+		System.out.print(this.vremeSati + " - " + this.vremeMinuti + " - " + this.naziv + " ... " + this.link);
 		if (this.username != null && this.password != null) {
 			System.out.print("*");
 		}
+		System.out.println();
 	}
 
 }
