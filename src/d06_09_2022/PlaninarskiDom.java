@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PlaninarskiDom {
 	private String nazivDoma;
 	private int godinaOsnovanja;
-	ArrayList<Planinar> p = new ArrayList<Planinar>();
+	private ArrayList<Planinar> p = new ArrayList<Planinar>();
 
 	public String getNazivDoma() {
 		return nazivDoma;
