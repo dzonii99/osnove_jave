@@ -3,7 +3,7 @@ package d06_09_2022;
 import java.util.ArrayList;
 
 public class Korpa {
-	ArrayList<Ambalaza> a = new ArrayList<Ambalaza>();
+	private ArrayList<Ambalaza> a = new ArrayList<Ambalaza>();
 
 	public void dodajAmbalazu(Ambalaza ambalaza) {
 		this.a.add(ambalaza);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Radnik {
 	protected String fullName;
-	ArrayList<Sektor> sektori = new ArrayList<Sektor>();
+	protected ArrayList<Sektor> sektori = new ArrayList<Sektor>();
 
 	public String getFullName() {
 		return fullName;
