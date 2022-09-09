@@ -47,11 +47,15 @@ public class Paket {
 		this.ugovornaObaveza += 12;
 	}
 
+	public int brojMeseciZaDinar() {
+		return 0;
+	}
+
 	public void print() {
 		System.out.println(this.fullName);
 		System.out.println(this.nazivPaketa + " - " + this.brzinaNetDownload + "/" + this.brzinaNetUpload + " - "
 				+ this.ugovornaObaveza);
-		System.out.println(this.mesecnaCena);
+		System.out.print(this.mesecnaCena);
 	}
 
 }

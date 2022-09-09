@@ -41,7 +41,11 @@ public class Zadatak3 {
 //		ime i prezime korisnika 
 //		naziv paketa - brzina download/brzina upload - ugovorna obaveza
 //		cena + broj meseci za dinar
+		Paket eon = new EONPaket("Petar peric", 1500, 24);
+		Paket duo = new DUOPaket("Nikola Milovanovic", 2300, 24, "tablet");
 
+		eon.print();
+		duo.print();
 	}
 
 }
